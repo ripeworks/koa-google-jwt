@@ -1,0 +1,16 @@
+{
+  "name": "koa-google-jwt",
+  "version": "0.0.1",
+  "main": "dist/index.js",
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "clean": "rm -rf dist && mkdir -p dist",
+    "build:node": "npm run clean && babel index.js -d dist"
+  },
+  "dependencies": {
+    "jsonwebtoken": "^8.1.0",
+    "node-fetch": "^1.7.3"
+  }
+}
