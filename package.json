@@ -7,10 +7,14 @@
   ],
   "scripts": {
     "clean": "rm -rf dist && mkdir -p dist",
-    "build:node": "npm run clean && babel index.js -d dist"
+    "build:node": "npm run clean && babel index.js -d dist",
+    "prepublish": "npm run build:node"
   },
   "dependencies": {
     "jsonwebtoken": "^8.1.0",
     "node-fetch": "^1.7.3"
+  },
+  "devDependencies": {
+    "babel-preset-env": "^1.6.1"
   }
 }

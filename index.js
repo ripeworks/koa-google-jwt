@@ -47,7 +47,7 @@ const loadTokenState = async (ctx, opts) => {
  */
 module.exports = (opts = {}) =>
   async (ctx, next) => {
-    opts = {...defaultOptions, ...opts}
+    opts = Object.assign({}, defaultOptions, opts)
     const callbackUrl = `${CLIENT_URL}${opts.callbackUrl}`
     await loadTokenState(ctx, opts)
 
